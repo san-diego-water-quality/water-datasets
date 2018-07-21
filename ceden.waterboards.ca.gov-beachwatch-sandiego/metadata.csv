@@ -2,18 +2,23 @@ Declare,metatab-latest
 Title,San Diego Beachwatch Data
 Description,Water quality data for San Diego county beaches.
 Identifier,585e2989-eb46-4533-97cd-d684ab122c6a
-Name,ceden.waterboards.ca.gov-beachwatch-sandiego-1
+Name,ceden.waterboards.ca.gov-beachwatch-sandiego-2
 Dataset,beachwatch
 Origin,ceden.waterboards.ca.gov
 Time,
 Space,sandiego
 Grain,
 Variant,
-Version,1
+Version,2
 Group,natural-environment
 Tag,water-project
 Created,2018-07-15T17:45:00
-Modified,2018-07-15T20:00:00
+Modified,2018-07-21T21:35:09
+Issued,2018-07-21T21:29:32
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2/metadata.csv
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2.zip
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2.csv
+Ckanid,c2980d83-29eb-41a0-8261-1ccf2c2f83ed
 Giturl,https://github.com/san-diego-water-quality/water-datasets.git
 
 Section,Contacts,Email,Organization,Url
