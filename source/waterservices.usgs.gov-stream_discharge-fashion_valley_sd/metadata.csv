@@ -1,0 +1,38 @@
+Declare,metatab-latest
+Title,Fashion Valley Stream Discharge Rates
+Description,"Stream discharge rates for the Fashion Valley station on the San Diego river,"
+Description,from 1988 on
+Identifier,874dc430-38ac-4023-bc3e-fc65066f3a72
+Name,waterservices.usgs.gov-stream_discharge-fashion_valley_sd-2
+Dataset,stream_discharge
+Origin,waterservices.usgs.gov
+Space,fashion_valley_sd
+Version,2
+Tag,water-project
+Created,2018-07-24T19:52:06
+Modified,2018-07-25T00:06:01
+Issued,2018-07-25T00:05:56
+Distribution,http://library.metatab.org/waterservices.usgs.gov-stream_discharge-fashion_valley_sd-2/metadata.csv
+Distribution,http://library.metatab.org/waterservices.usgs.gov-stream_discharge-fashion_valley_sd-2.zip
+Distribution,http://library.metatab.org/waterservices.usgs.gov-stream_discharge-fashion_valley_sd-2.csv
+Ckanid,3c405cec-646c-47fd-9a13-f03d32cb8ddd
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git
+""
+Section,Contacts,Email,Organization,Url,,
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,,
+""
+Section,Documentation,Title,Description,,,
+Documentation,file:README.md,README,,,,
+Documentation,https://waterdata.usgs.gov/ca/nwis/uv?11023000,Data access page,Web page with links to graphs and downloads,,,
+Documentation,https://waterservices.usgs.gov/rest/DV-Test-Tool.html,URL Generation,USGS Daily Values Web Service URL Generation Tool,,,
+""
+Section,Resources,Name,Description,HeaderLines,StartLine,target_format
+Datafile,https://waterservices.usgs.gov/nwis/dv/?format=rdb&sites=11023000&startDT=1988-01-01&siteStatus=all,fashion_valley,"Stream discharge rates for the San Diego River, Fashion Valley Station.",29,31,tsv
+""
+Section,Schema,DataType,AltName,Description,,
+Table,fashion_valley,,,,,
+Table.Column,agency_cd,string,,Source agency. Always “USGS”,,
+Table.Column,site_no,integer,,"Site number, always “11023000”",,
+Table.Column,datetime,date,,"Reading date, in ISO format.",,
+Table.Column,7745_00060_00003,number,discharge_rate,"Mean discharge, in cubic feet per second ( USGS Parameter  7745_00060_00003 )",,
+Table.Column,7745_00060_00003_cd,string,qualification_code,"A=Approved, e= Estimated, P=Provisional",,

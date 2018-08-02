@@ -1,0 +1,40 @@
+Declare,metatab-latest
+Title,Water Project Datasets
+Description,Combined datasets for the Data Library’s Water Quality Project
+Identifier,c7382519-687d-4387-9548-4963c9daa502
+Name,sandiegodata.org-water_quality-3
+Dataset,water_quality
+Origin,sandiegodata.org
+Version,3
+Tag,water-project
+Created,2018-07-28T22:55:09
+Modified,2018-07-30T16:10:58
+Issued,2018-07-30T16:10:53
+Distribution,http://library.metatab.org/sandiegodata.org-water_quality-3/metadata.csv
+Distribution,http://library.metatab.org/sandiegodata.org-water_quality-3.zip
+Distribution,http://library.metatab.org/sandiegodata.org-water_quality-3.csv
+Ckanid,882b0a7c-b205-4a6a-8970-8dfdcb92a9a9
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git
+""
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+""
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+Documentation,http://tinyurl.com/ydysjhfm,EDA Notebook,Exploratory Data Analysis and characterization,
+""
+Section,References,Name,Description,
+Reference,index:waterservices.usgs.gov-stream_discharge-fashion_valley_sd#fashion_valley,sd_river_discharge,"Stream discharge rates for the San Diego River, Fashion Valley Station.",
+Reference,index:tidesandcurrents.noaa.gov-water_levels-la_jolla#water_levels,la_jolla_tide,High and Low Ocean water levels for the La Jolla station.,
+Reference,index:noaa.gov-localclimate-200808_201807-san#lcd-san,local_climate,Local climate data for San Diego,
+""
+Section,Resources,Name,Description,
+Datafile,notebooks/Combine.ipynb#comb,tides_river_rain,"Combined max, min tides, San Diego river flow and daily precipitation",
+""
+Section,Schema,DataType,Description,
+Table,tides_river_rain,,,
+Table.Column,date,date,date,
+Table.Column,discharge_rate,number,"Discharge rate, in cubic feet per second, for the San Diego River at Fashion Valley",
+Table.Column,dailyprecip,string,"Daily precipitation, in inches, at Lindberg Field",
+Table.Column,wl_max,string,"Max ocean water level, in feet, at La Jolla",
+Table.Column,wl_min,string,"Min water level, in feet, at La Jolla",
