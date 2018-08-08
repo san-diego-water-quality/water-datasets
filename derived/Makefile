@@ -3,23 +3,15 @@
 ## for comments and course-enrollments
 ##
 
+.PHONY: sync packages default init 
+default: packages ;
+
 
 PACK_DIR=_build
-S3_BUCKET=library.metatab.org
 
 
-.PHONY: $(PACK_DIR) clean packages s3 ckan 
-default: packages ;
-	
 PACKAGE_NAMES=\
-ceden.waterboards.ca.gov-beachwatch-sandiego \
-ceden.waterboards.ca.gov-tmdl-sandiego \
-census.gov-counties-2017 \
-census.gov-tracts-2017-sandiego \
-noaa.gov-localclimate-200808_201807-san \
-tidesandcurrents.noaa.gov-water_levels-la_jolla \
-usngcenter.org-usng-ca11 \
-waterservices.usgs.gov-stream_discharge-fashion_valley_sd 
+sandiegodata.org-water_quality
 
 
 PACKAGE_MARKERS = $(patsubst %,$(PACK_DIR)/%.build,$(PACKAGE_NAMES))
@@ -36,14 +28,15 @@ $(PACK_DIR)/%.build :  $(PACK_DIR) %/_packages/last_build
 	@echo ======== BUILD $* from $* =======
 	mp --exceptions build -f -z $* && touch $(PACK_DIR)/$*.build
 	mp index $* 	
-	
+	@echo ======== FINISHED BUILDING $* =======
+
 $(PACK_DIR)/%.s3: $(PACK_DIR)/%.build
 	@echo ======== S3 $* \( $@ \) =======
 	mp s3 -s $(S3_BUCKET) $*  && touch $(PACK_DIR)/$*.s3
 	
 $(PACK_DIR)/%.ckan: $(PACK_DIR)/%.s3
 	@echo ======== CKAN $* \( $@ \) =======
-	mp ckan  $* && touch $(PACK_DIR)/$*.ckan 
+	mp s3 -s $(S3_BUCKET) $*  && touch $(PACK_DIR)/$*.ckan
 	
 
 # Make a package, using the packages'
@@ -51,9 +44,6 @@ $(PACK_DIR)/%.ckan: $(PACK_DIR)/%.s3
 $(PACKAGE_NAMES): %:$(PACK_DIR)/%.build ; 
 
 # Make all packages 
-
-clean: 
-	echo
 
 packages: $(PACKAGE_MARKERS) ;
 

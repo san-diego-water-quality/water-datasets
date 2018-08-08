@@ -1,0 +1,87 @@
+Declare,metatab-latest
+Title,"San Diego Beachwatch Data, With Features"
+Description,"Water quality data for San Diego county beaches from from CEDEN, with added"
+Description,"features for log transformation, quantiles and group codes."
+Identifier,2fd7bc17-28c2-4f4a-b494-1d9ca706a79a
+Name,sandiegodata.org-beachwatch-1
+Dataset,beachwatch
+Origin,sandiegodata.org
+Version,1
+Tag,water-project
+Created,2018-08-07T14:26:42
+Modified,2018-08-08T21:19:40
+Issued,2018-08-08T21:19:32
+Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-1/metadata.csv
+Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-1.csv
+Ckanid,3aff18ac-cb1e-4d09-be0e-49b931f02216
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git
+""
+Section,Contacts,Email,Organization,Url,
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com,
+""
+Section,Documentation,Title,Description,,
+Documentation,file:README.md,README,,,
+Notebook,notebooks/Examples.ipynb,Examples,Usage and regression examples,,
+Downloadpage,https://ceden.waterboards.ca.gov/AdvancedQueryTool,source_page,CEDEN advanced query tool page,,
+Downloadpage,https://ceden.waterboards.ca.gov/Metadata/ControlledVocab.php,controlled_vocab,Controlled vocabulary search page,,
+Downloadpage,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=AnalyteLU&include_all=yes,analyte_cv,Analyte controlled vocabulary,,
+Downloadpage,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=MethodLU&include_all=yes,method_cv,Method controlled  vocabulary,,
+Downloadpage,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=ResultQualityLU&include_all=yes,result_qual_cv,Result Qualifier controlled vocabulary,,
+Downloadpage,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=QA_LU&include_all=yes,qa_cv,QA controlled vocabulary,,
+""
+Section,References,Name,Description,,
+Reference,index:ceden.waterboards.ca.gov-beachwatch-sandiego#beachwatch-sd,beachwatch_source,Beachwatch source data,,
+""
+Section,Resources,Name,Description,,
+Datafile,notebooks/Add_Features.ipynb#stations,stations,Measurement stations,,
+Datafile,notebooks/Add_Features.ipynb#measure_codes,measure_codes,Measurement group codes,,
+Datafile,notebooks/Add_Features.ipynb#obs_m,beachwatch,"Beachwatch data, with features added",,
+""
+Section,Schema,DataType,Description,,AltName
+Table,stations,,,,
+Table.Column,stationname,string,Full name of the station,,
+Table.Column,stationcode,string,Short name for the station,,
+Table.Column,stationgroup,string,First two characters of station code,,
+Table.Column,targetlatitude,number,Station lattitude,,
+Table.Column,targetlongitude,number,Station longitude,,
+Table,measure_codes,,,,
+Table.Column,analyte,string,"The type of bacterial being measured, for coliform, total coliform, Enterococcus or E. coli.",,
+Table.Column,methodname,string,"Method used to count bacteria, such as “MTF”, “SM 9222 B” or “Enterolert”",,
+Table.Column,unit,string,"Measurement units, type of count per 100 ml.",,
+Table.Column,measure_code,integer,"The number of the unique group of analyte, mehodname and unit.",,
+Table,beachwatch,,,,
+Table.Column,stationcode,string,Short name for the station,,
+Table.Column,stationgroup,string,First two characters of station code,,
+Table.Column,sampledate,datetime,Date sample was taken,,
+Table.Column,collectiontime,time,Time sample was taken,,
+Table.Column,measure_code,integer,"Reference to the measure codes, the unique groups of analyte, mehodname and unit.",,
+Table.Column,analyte,string,"The type of bacterial being measured, for coliform, total coliform, Enterococcus or E. coli.",,
+Table.Column,methodname,string,"Method used to count bacteria, such as “MTF”, “SM 9222 B” or “Enterolert”",,
+Table.Column,unit,string,"Measurement units, type of count per 100 ml.",,
+Table.Column,result,integer,Measured value,,
+Table.Column,result_group_count,integer,Number of records in this measurement group,,
+Table.Column,result_group_std,number,Standard deviation for this group,,
+Table.Column,result_group_mean,number,Mean for this group,,
+Table.Column,result_group_25pctl,number,25th percentile for this group,,
+Table.Column,result_group_median,number,Median for this group,,
+Table.Column,result_group_75pctl,number,75th percentile for  this group,,
+Table.Column,result_gt_median,number,"1 if the result is greater than the median, 0 otherwise",,
+Table.Column,result_gt_mean,number,"1 if the result is greater than the mean, 0 otherwise",,
+Table.Column,result_lte_25pctl,number,"1 if the result is less than or equal to the 25th percentile, 0 otherwise",,
+Table.Column,result_gte_75pctl,number,"1 if the result is greater than or equal to the 75th percentile, 0 otherwise",,
+Table.Column,lresult,number,Log  of measured value,,
+Table.Column,lresult_group_std,number,Standard deviation of log(result) for this group,,
+Table.Column,lresult_group_mean,number,Mean of log(result) for this group,,
+Table.Column,lresult_group_25pctl,number,25th percentile of log(result) for this group,,
+Table.Column,lresult_group_median,number,Median of log(result) for this group,,
+Table.Column,lresult_group_75pctl,number,75th percentile of log(result) for this group,,
+Table.Column,lresult_gt_lmedian,number,"1 if the result is greater than the median of log(result) , 0 otherwise",,
+Table.Column,lresult_gt_lmean,number,"1 if the result is greater than the mean of log(result) , 0 otherwise",,
+Table.Column,lresult_lte_25pctl,number,"1 if the result is less than or equal to the 25th percentile of log(result) , 0 otherwise",,
+Table.Column,lresult_gte_75pctl,number,"1 if the result is greater than or equal to the 75th percentile of log(result) , 0 otherwise",,
+Table.Column,labbatch,string,Identifier of the processing group in the lab,,
+Table.Column,resultqualcode,string,Result Qualifier code. See result_qual_cv documentation,,
+Table.Column,qacode,string,QA code. See qa_cv documentation,,
+Table.Column,sampleagency,string,Code for agency that took the sample,,
+Table.Column,labagency,string,Code for agency that analyzed sample,,
+Table.Column,submittingagency,string,Code for agency that submitted sample to lab,,

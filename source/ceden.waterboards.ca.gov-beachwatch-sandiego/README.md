@@ -28,3 +28,8 @@ From [Cascade Analytical](http://www.cascadeanalytical.com/resources-downloads/f
     useful when samples contain too few organisms for agar plates to be used or
     when organisms will not grow on agar. For example: 50 MPN/100 mL means that
     the Most Probable Number of viable cells in 100 mL of sample is 50.
+
+I haven't found traditional data dictionary documentation, [but there are
+controlled vocabulary lists](http://ceden.org/CEDEN_checker/Checker/LookUpLists.php) online for data submitters, which explain a lot of
+the columns.
+

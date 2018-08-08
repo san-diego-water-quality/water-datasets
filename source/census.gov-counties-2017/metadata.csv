@@ -9,23 +9,22 @@ Time,2017
 Version,2
 Group,built_environment
 Created,05/05/18 09:25 PM
-Modified,2018-07-15T22:54:09
-Issued,2018-07-15T22:52:54
+Modified,2018-08-02T21:22:27
+Issued,2018-08-02T21:18:24
 Distribution,http://library.metatab.org/census.gov-counties-2017-2/metadata.csv
-Distribution,http://library.metatab.org/census.gov-counties-2017-2.zip
 Distribution,http://library.metatab.org/census.gov-counties-2017-2.csv
 Ckanid,af9c5bc9-f0dc-4eb5-ab5a-a11a3e4bcced
 Giturl,https://github.com/san-diego-water-quality/water-datasets.git
-
+""
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-
+""
 Section,Documentation,Title,Description,
 Includedocumentation,file:README.md,README,,
-
+""
 Section,Resources,Name,Description,Projection
 Datafile,shape+http://www2.census.gov/geo/tiger/GENZ2017/shp/cb_2017_us_county_20m.zip,counties,,<source>
-
+""
 Section,Schema,DataType,AltName,Description
 Table,counties,,,
 Table.Column,id,integer,,

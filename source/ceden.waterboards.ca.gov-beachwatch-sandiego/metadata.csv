@@ -1,37 +1,45 @@
-Declare,metatab-latest
-Title,San Diego Beachwatch Data
-Description,Water quality data for San Diego county beaches.
-Identifier,585e2989-eb46-4533-97cd-d684ab122c6a
-Name,ceden.waterboards.ca.gov-beachwatch-sandiego-2
-Dataset,beachwatch
-Origin,ceden.waterboards.ca.gov
-Time,
-Space,sandiego
-Grain,
-Variant,
-Version,2
-Group,natural-environment
-Tag,water-project
-Created,2018-07-15T17:45:00
-Modified,2018-07-21T21:35:09
-Issued,2018-07-21T21:29:32
-Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2/metadata.csv
-Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2.zip
-Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2.csv
-Ckanid,c2980d83-29eb-41a0-8261-1ccf2c2f83ed
-Giturl,https://github.com/san-diego-water-quality/water-datasets.git
-
+Declare,metatab-latest,,,
+Title,San Diego Beachwatch Data,,,
+Description,Water quality data for San Diego county beaches.,,,
+Identifier,585e2989-eb46-4533-97cd-d684ab122c6a,,,
+Name,ceden.waterboards.ca.gov-beachwatch-sandiego-2,,,
+Dataset,beachwatch,,,
+Origin,ceden.waterboards.ca.gov,,,
+Time,,,,
+Space,sandiego,,,
+Grain,,,,
+Variant,,,,
+Version,2,,,
+Group,natural-environment,,,
+Tag,water-project,,,
+Created,2018-07-15T17:45:00,,,
+Modified,2018-08-02T21:20:36,,,
+Issued,2018-08-02T21:18:13,,,
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2/metadata.csv,,,
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-beachwatch-sandiego-2.csv,,,
+Ckanid,c2980d83-29eb-41a0-8261-1ccf2c2f83ed,,,
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git,,,
+,,,,
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-
+,,,,
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
 Documentation,https://www.waterboards.ca.gov/water_issues/programs/beaches/beach_water_quality/beaches_program.html,overview,Project Overview Page,
 Documentation,https://ceden.waterboards.ca.gov/AdvancedQueryTool,source_page,CEDEN advanced query tool page,
-
+Documentation,https://ceden.waterboards.ca.gov/Metadata/ControlledVocab.php,controlled_vocab,Controlled vocabulary search page,
+Documentation,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=AnalyteLU&include_all=yes,analyte_cv,Analyte controlled vocabulary,
+Documentation,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=MethodLU&include_all=yes,method_cv,Method controlled  vocabulary,
+Documentation,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=ResultQualityLU&include_all=yes,result_qual_cv,Result Qualifier controlled vocabulary,
+Documentation,https://ceden.waterboards.ca.gov/Metadata/get_lu_data.php?format=html&table=QA_LU&include_all=yes,qa_cv,QA controlled vocabulary,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
 Section,Resources,Name,Description,
 Datafile,http://ds.civicknowledge.org/ceden.waterboards.ca.gov/ceden-beachwatch.tsv.zip,beachwatch-sd,Beachwatch program for San Diego county,
-
+,,,,
 Section,Schema,DataType,AltName,Description
 Table,beachwatch-sd,,,
 Table.Column,Program,string,program,

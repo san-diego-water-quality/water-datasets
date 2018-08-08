@@ -16,3 +16,11 @@ Notebook](https://github.com/san-diego-water-quality/water-datasets/blob/master/
 sandiegodata.org-water_quality/notebooks/eda-tides_river_rain.ipynb) for
 details of the structure of the data, in particular, the time coverage in the
 Nulls section.
+
+
+# Versions
+
+1. Initial
+2. Continued development
+3. First release
+4. Added rolling averages
