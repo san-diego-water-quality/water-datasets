@@ -9,9 +9,9 @@ S3_BUCKET=library.metatab.org
 
 PACK_DIR=_build
 
-.PHONY: $(PACK_DIR) clean packages s3 ckan list
+.PHONY: $(PACK_DIR) clean build s3 ckan list info
 	
-default: packages ;
+default: build ;
 	
 # List all of the targets
 list:
@@ -25,7 +25,6 @@ CKAN_MARKERS = $(patsubst %,$(PACK_DIR)/%.ckan,$(PACKAGE_NAMES))
 
 $(PACK_DIR):
 	mkdir -p $(PACK_DIR)
-
 
 
 # Build a package file in the packages
@@ -53,6 +52,11 @@ $(PACK_DIR)/%.ckan: $(PACK_DIR)/%.s3
 $(PACKAGE_NAMES): %:$(PACK_DIR)/%.build ; 
 
 # Make all packages 
+
+info:
+	@echo ======
+	@echo PACKAGE_MARKERS=$(PACKAGE_MARKERS)
+	@echo PACKAGE_NAMES=$(PACKAGE_NAMES)
 
 clean: 
 	rm -rf $(PACK_DIR)
