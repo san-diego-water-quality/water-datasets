@@ -12,9 +12,10 @@ Version,4
 Group,natural-environment
 Tag,water-project
 Created,2018-07-10T04:45:41
-Modified,2018-08-02T21:22:37
-Issued,2018-08-02T21:18:35
+Modified,2018-08-09T00:02:10
+Issued,2018-08-09T00:02:09
 Distribution,http://library.metatab.org/noaa.gov-localclimate-200808_201807-san-4/metadata.csv
+Distribution,http://library.metatab.org/noaa.gov-localclimate-200808_201807-san-4.zip
 Distribution,http://library.metatab.org/noaa.gov-localclimate-200808_201807-san-4.csv
 Ckanid,51846741-44ee-45c6-a786-68fb3cad4564
 Giturl,https://github.com/san-diego-water-quality/water-datasets.git

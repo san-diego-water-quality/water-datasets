@@ -10,9 +10,10 @@ Version,2
 Group,natural-environment
 Tag,water-project
 Created,2018-07-15T17:45:08
-Modified,2018-08-03T01:13:57
-Issued,2018-08-03T01:12:49
+Modified,2018-08-09T00:00:23
+Issued,2018-08-09T00:00:22
 Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-tmdl-sandiego-2/metadata.csv
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-tmdl-sandiego-2.zip
 Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-tmdl-sandiego-2.csv
 Ckanid,e218bda0-05cd-4fb7-bdca-106d3265ebb0
 Giturl,https://github.com/san-diego-water-quality/water-datasets.git

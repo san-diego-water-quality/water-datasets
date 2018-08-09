@@ -9,42 +9,40 @@ This datasets excludes the const and empty columns from the source dataset.
 These columns and their values are:
 
 
-|    | Column Name                 | Constant Value              |
-|---:|:----------------------------|:----------------------------|
-|  0 | program                     | BeachWatch                  |
-|  1 | parentproject               | BeachWatch_San Diego County |
-|  2 | project                     | BeachWatch_San Diego County |
-|  3 | locationcode                | SurfZone                    |
-|  4 | collectiondepth             | -88                         |
-|  5 | unitcollectiondepth         | NR                          |
-|  6 | sampletypecode              | Grab                        |
-|  7 | collectionreplicate         | 1                           |
-|  8 | resultsreplicate            | 1                           |
-|  9 | labsampleid                 | Not Recorded                |
-| 10 | matrixname                  | samplewater                 |
-| 11 | mdl                         | -88                         |
-| 12 | rl                          | -88                         |
-| 13 | batchverification           | NR                          |
-| 14 | compliancecode              | NR                          |
-| 15 | eventcode                   | WQ                          |
-| 16 | protocolcode                | Not Recorded                |
-| 17 | collectionmethodname        | Water_Grab                  |
-| 18 | collectiondevicedescription | Not Recorded                |
-| 19 | calibrationdate             | 0000-00-00                  |
-| 20 | positionwatercolumn         | Not Recorded                |
-| 21 | preppreservationname        | Not Recorded                |
-| 22 | preppreservationdate        | 0000-00-00 00:00:00         |
-| 23 | digestextractmethod         | Not Recorded                |
-| 24 | digestextractdate           | 0000-00-00                  |
-| 25 | analysisdate                | 0000-00-00                  |
-| 26 | dilutionfactor              | -88                         |
-| 27 | expectedvalue               | 0                           |
-| 28 | submissioncode              | NR                          |
-| 29 | county                      | San Diego                   |
-| 30 | county_fips                 | 73                          |
-| 31 | regional_board              | San Diego                   |
-| 32 | rb_number                   | 9                           |
-| 33 | sampleid                    | Not Recorded                |
+    program                      BeachWatch
+    parentproject                BeachWatch_San Diego County
+    project                      BeachWatch_San Diego County
+    locationcode                 SurfZone
+    collectiondepth              -88
+    unitcollectiondepth          NR
+    sampletypecode               Grab
+    collectionreplicate          1
+    resultsreplicate             1
+    labsampleid                  Not Recorded
+    matrixname                   samplewater
+    mdl                          -88
+    rl                           -88
+    batchverification            NR
+    compliancecode               NR
+    eventcode                    WQ
+    protocolcode                 Not Recorded
+    collectionmethodname         Water_Grab
+    collectiondevicedescription  Not Recorded
+    calibrationdate              0000-00-00
+    positionwatercolumn          Not Recorded
+    preppreservationname         Not Recorded
+    preppreservationdate         0000-00-00 00:00:00
+    digestextractmethod          Not Recorded
+    digestextractdate            0000-00-00
+    analysisdate                 0000-00-00
+    dilutionfactor               -88
+    expectedvalue                0
+    submissioncode               NR
+    county                       San Diego
+    county_fips                  73
+    regional_board               San Diego
+    rb_number                    9
+    sampleid                     Not Recorded
 
 The dataset also excludes these Null columns:
 
