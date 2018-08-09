@@ -11,13 +11,13 @@ features.
 
 First thing is to install the Python modules in requirements.txt, usuall: 
 
-    pip instlal -r requirements.txt
+    pip install -r requirements.txt
 
 To build all of the datasets, run ``make``. The key targets are: 
 
-* make build: build all of the datasets
-* make s3: Build, then upload to s3
-* make ckan: Build, upload to s3, then submit to CKAN. 
+* ``make build``: build all of the datasets
+* ``make s3``: Build, then upload to s3
+* ``make ckan``: Build, upload to s3, then submit to CKAN. 
 
 
 The S3 target requires S3 credentials to be set for boto for the bucket
@@ -32,14 +32,14 @@ documentataion for details.
 
 The ckan target requires two environmental variable to be set: 
 
-* METAKAN_CKAN_URL, with the base URL to the CKAN repository
-* METAKAN_API_KEY, With the API key for an account, which you can get from a user's page in CKAN. 
+* ``METAKAN_CKAN_URL``, with the base URL to the CKAN repository
+* ``METAKAN_API_KEY``, With the API key for an account, which you can get from a user's page in CKAN. 
 
 There are also clean targets for all of the build targets: 
 
-* clean-build
-* clean-s3
-* clean-ckan
+* ``clean-build``
+* ``clean-s3``
+* ``clean-ckan``
 
 ## Using Datasets
 
