@@ -1,13 +1,17 @@
 
 # Water Project Datasets
 
-These data packages are part of the [San Diego QWater QUality Data
+These data packages are part of the [San Diego Water Quality Data
 Project](http://water.sandiegodata.org/). THe ``source`` directory contains
 data packages for original extracts from upstream soruces, and the ``derived``
 directory holds processed packages that combine multiple measures and add
 features.
 
 ## Building the Datasets
+
+First thing is to install the Python modules in requirements.txt, usuall: 
+
+    pip instlal -r requirements.txt
 
 To build all of the datasets, run ``make``. The key targets are: 
 

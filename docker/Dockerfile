@@ -26,13 +26,16 @@ RUN apt-get update && apt-get -yq dist-upgrade \
  && rm -rf /var/lib/apt/lists/*
   
 RUN conda install -y numpy pandas scipy scikit-learn \
-    statsmodels ipython ipykernel jupyter 
+    statsmodels ipython ipykernel jupyter boto requests
   
 RUN mkdir -p /opt/metapack
  
 ADD cmd.sh /opt/metapack
 ADD entrypoint.sh /opt/metapack
+ADD build /opt/metapack
  
 WORKDIR /opt/metapack
 
+ENTRYPOINT ["/opt/metapack/entrypoint.sh"]
 
+#CMD ["/opt/metapack/cmd.sh"]

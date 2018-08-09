@@ -1,8 +1,12 @@
 # pip freeze | egrep  'pandas|numpy|metapack|sci|stats|ipython'
 numpy<=1.14.5
 geopandas==0.3.0
-pandas==0.23.4
 scipy==1.1.0
 statsmodels==0.9.0
 metapack>=0.8.14
-ipython==6.2.1
+pandas
+ipykernel
+ipython
+fiona
+shapely
+pyproj

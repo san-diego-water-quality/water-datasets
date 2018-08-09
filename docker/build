@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+pip install metapack
+
+if [ ! -d "/opt/metapack/water-datasets" ]; then
+	cd /opt/metapack
+	git clone https://github.com/san-diego-water-quality/water-datasets.git
+	cd /opt/metapack/water-datasets
+else
+	cd /opt/metapack/water-datasets
+	git pull 
+fi
+
+
+make

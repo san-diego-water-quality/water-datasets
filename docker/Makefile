@@ -9,7 +9,8 @@ DOCKER ?= docker
 
 
 
-VOLUMES=  -v opt-metapack:/opt/metapack
+VOLUMES=  -v datapackages:/opt/datapackages
+
 .PHONY: build push shell run start stop restart reload rm rmf release
 
 build:
