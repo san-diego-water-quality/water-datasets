@@ -9,4 +9,30 @@ features.
 
 ## Building the Datasets
 
+To build all of the datasets, run ``make``. The key targets are: 
+
+* make build: build all of the datasets
+* make s3: Build, then upload to s3
+* make ckan: Build, upload to s3, then submit to CKAN. 
+
+The S3 target requires S3 credentials to be set for boto for the bucket
+``library.metatab.org``, which is usually done with either:
+
+* A credentials file in ~/.aws/credentials
+* Environmental variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
+
+Refer to the [boto
+credentials](https://boto3.readthedocs.io/en/latest/guide/configuration.html)
+documentataion for details.
+
+The ckan target requires two environmental variable to be set: 
+
+* METAKAN_CKAN_URL, with the base URL to the CKAN repository
+* METAKAN_API_KEY, With the API key for an account, which you can get from a user's page in CKAN. 
+
+There are also clean targets for all of the build targets: 
+
+* clean-build
+* clean-s3
+* clean-ckan
 
