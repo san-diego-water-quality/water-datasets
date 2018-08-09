@@ -19,6 +19,7 @@ To build all of the datasets, run ``make``. The key targets are:
 * make s3: Build, then upload to s3
 * make ckan: Build, upload to s3, then submit to CKAN. 
 
+
 The S3 target requires S3 credentials to be set for boto for the bucket
 ``library.metatab.org``, which is usually done with either:
 
@@ -40,3 +41,29 @@ There are also clean targets for all of the build targets:
 * clean-s3
 * clean-ckan
 
+## Using Datasets
+
+If you are building the datasets for local analysis, you'll probably want to index them and use them through the index. First, build the datasets with make, the index them: 
+
+    mp index source
+    mp index derived
+
+Then you can check the index by listing the dataset with:
+
+    mp search -l 
+
+Or search for one with : 
+
+    mp search beachwatch 
+
+Now you can use the names in package names that have an 'index:' prefix, usually also with the version number removed. For instance: 
+
+    mp run index:sandiegodata.org-beachwatch#stations
+    
+Or, in Python/Jupyter:     
+
+    import metapack as mp
+    mp.jupyter.init()
+    pkg = mp.open_package('index:sandiegodata.org-beachwatch#stations')
+    df = pkg.default_resource.read_csv()
+    print(df.head())
