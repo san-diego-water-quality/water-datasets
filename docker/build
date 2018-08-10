@@ -1,5 +1,8 @@
 #!/bin/bash 
 
+
+mkdir -p/opt/datapackages
+
 pip install metapack
 
 if [ ! -d "/opt/metapack/water-datasets" ]; then
@@ -12,4 +15,4 @@ else
 fi
 
 
-make
+
