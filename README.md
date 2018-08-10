@@ -7,6 +7,24 @@ data packages for original extracts from upstream soruces, and the ``derived``
 directory holds processed packages that combine multiple measures and add
 features.
 
+
+## Quickstart
+
+The easiest way to get these datasets is to visit the [water-project tag in our data repository](https://data.sandiegodata.org/dataset?tags=water-project). 
+
+You can get programatic access to these in metapack:
+
+	$ pip install metapack
+	$ mp run http://library.metatab.org/sandiegodata.org-beachwatch-3.csv#stations
+
+Or, in a Jupyter notebook: 
+
+	import metapack as mp
+	pkg = mp.open_package('http://library.metatab.org/sandiegodata.org-beachwatch-3.csv')
+	df = pkg.resource('stations').read_csv()
+	df.head()
+
+
 ## Building the Datasets
 
 First thing is to install the Python modules in requirements.txt, usually: 
