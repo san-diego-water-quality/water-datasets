@@ -11,7 +11,7 @@ features.
 
 First thing is to install the Python modules in requirements.txt, usually: 
 
-    pip install -r requirements.txt
+    make install
 
 To build all of the datasets, run ``make``. The key targets are: 
 

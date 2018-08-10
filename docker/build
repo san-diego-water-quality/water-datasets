@@ -3,7 +3,8 @@
 
 mkdir -p /opt/datapackages
 
-pip install metapack
+#pip install metapack
+pip install git+https://github.com/Metatab/metapack.git
 
 if [ ! -d "/opt/metapack/water-datasets" ]; then
 	cd /opt/metapack
