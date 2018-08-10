@@ -1,7 +1,26 @@
 # Beachwatch Data, with Enhanced Features
 
+This datasets rebuilds ``ceden.waterboards.ca.gov-beachwatch-sandiego`` with
+constant and null columns removed and many features added. It also breaks out
+station information into a seperate datasets, and enumerates the many
+difference combinations of methodname/analyte/unit, adding a code for each
+group to the dataset in ``measure_code``. The measure code identifies sets of
+records that have compatible measurements.
 
+The dataset adds counts, mean, median and quantiles for groups of
+station_code/measure_code. The dataset rows are grouped, for each station and
+measure code, and mean, median and quantiles computed for each group. The procedure is performed both for ``result`` and for ``lresult``, the log of ``results``. 
 
+After computing the group summary statistics, the processing creates
+dichotomous features for the relationship of ``result`` and ``lresult`` to the
+summary value, including:
+
+* Greater than the median
+* Greater than the mean
+* Less than or equal to the 25th percentile
+* Greater than or equal to the 7th percentile
+
+These variables are particularly useful for doing logistic regressions across the measure code groups or stations. 
 
 # Elided Columns
 

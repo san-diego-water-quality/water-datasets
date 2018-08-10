@@ -10,3 +10,8 @@ $(SUBDIRS):
 	$(MAKE) -C $@ $(MAKECMDGOALS)
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
+	
+	
+index:
+	mp index source
+	mp index derived

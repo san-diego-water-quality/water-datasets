@@ -2,14 +2,14 @@
 # Water Project Datasets
 
 These data packages are part of the [San Diego Water Quality Data
-Project](http://water.sandiegodata.org/). THe ``source`` directory contains
+Project](http://water.sandiegodata.org/). The ``source`` directory contains
 data packages for original extracts from upstream soruces, and the ``derived``
 directory holds processed packages that combine multiple measures and add
 features.
 
 ## Building the Datasets
 
-First thing is to install the Python modules in requirements.txt, usuall: 
+First thing is to install the Python modules in requirements.txt, usually: 
 
     pip install -r requirements.txt
 
@@ -43,10 +43,11 @@ There are also clean targets for all of the build targets:
 
 ## Using Datasets
 
-If you are building the datasets for local analysis, you'll probably want to index them and use them through the index. First, build the datasets with make, the index them: 
+These datasets are all published to the [Data Library's CKAN Repo](https://data.sandiegodata.org/dataset?tags=water-project), so it's easiest to get them from there. 
 
-    mp index source
-    mp index derived
+If you are building the datasets for local analysis, you'll probably want to index them and use them through the index. First, build the datasets with make, then index them: 
+
+    make index
 
 Then you can check the index by listing the dataset with:
 
