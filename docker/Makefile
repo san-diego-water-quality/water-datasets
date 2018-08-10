@@ -17,6 +17,9 @@ build:
 	$(DOCKER) build -t $(NS)/$(REPO):$(VERSION) .
 
 
+packages:
+	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /opt/metapack/build
+
 shell:
 	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
 

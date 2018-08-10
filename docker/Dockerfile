@@ -19,8 +19,11 @@ RUN apt-get update && apt-get -yq dist-upgrade \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
   
-RUN conda install -y numpy pandas scipy scikit-learn \
-    statsmodels ipython ipykernel jupyter boto requests
+RUN conda install -y  Markdown PyYAML SQLAlchemy appdirs \
+	beautifulsoup4 boto3  chardet \
+	filelock  ipykernel ipython jmespath jupyter numpy \
+	pandas petl requests s3transfer scikit-learn scipy statsmodels 
+	  
   
 RUN mkdir -p /opt/metapack
  

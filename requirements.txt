@@ -10,3 +10,4 @@ ipython
 fiona
 shapely
 pyproj
+seaborn
