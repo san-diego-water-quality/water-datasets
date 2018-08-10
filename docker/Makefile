@@ -16,8 +16,6 @@ VOLUMES=  -v datapackages:/opt/datapackages
 build:
 	$(DOCKER) build -t $(NS)/$(REPO):$(VERSION) .
 
-push:
-	$(DOCKER) push $(NS)/$(REPO):$(VERSION)
 
 shell:
 	$(DOCKER) run --rm -i -t $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION) /bin/bash
@@ -31,18 +29,6 @@ run:
 logs:
 	$(DOCKER) logs -f $(NAME) 
 
-start:
-	$(DOCKER) run -d --name $(NAME) $(PORTS) $(VOLUMES) $(ENV) $(NS)/$(REPO):$(VERSION)
-
-stop:
-	$(DOCKER) stop $(NAME)
-	
-install_plugins:
-	$(DOCKER) exec  -ti $(NAME) redmine_install_plugins
-	
-restart: stop start
-
-reload: build rmf start
 
 rmf:
 	$(DOCKER) rm -f $(NAME)

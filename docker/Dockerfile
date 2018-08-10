@@ -14,12 +14,6 @@ RUN apt-get update && apt-get -yq dist-upgrade \
  netcat \
  pandoc \
  python-dev \
- texlive-fonts-extra \
- texlive-fonts-recommended \
- texlive-generic-recommended \
- texlive-latex-base \
- texlive-latex-extra \
- texlive-xetex \
  unzip \
  nano \
  && apt-get clean \

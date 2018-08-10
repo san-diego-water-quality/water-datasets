@@ -11,6 +11,8 @@ $(SUBDIRS):
 
 .PHONY: $(TOPTARGETS) $(SUBDIRS)
 	
+install:
+	pip install -r requirements.txt
 	
 index:
 	mp index source
