@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 
-mkdir -p/opt/datapackages
+mkdir -p /opt/datapackages
 
 pip install metapack
 
