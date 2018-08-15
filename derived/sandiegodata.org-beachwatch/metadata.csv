@@ -3,17 +3,17 @@ Title,"San Diego Beachwatch Data, With Features"
 Description,"Water quality data for San Diego county beaches from CEDEN, with added features"
 Description,"for log transformation, quantiles and group codes."
 Identifier,2fd7bc17-28c2-4f4a-b494-1d9ca706a79a
-Name,sandiegodata.org-beachwatch-3
+Name,sandiegodata.org-beachwatch-4
 Dataset,beachwatch
 Origin,sandiegodata.org
-Version,3
+Version,4
 Tag,water-project
 Created,2018-08-07T14:26:42
-Modified,2018-08-09T23:05:42
-Issued,2018-08-09T23:05:36
-Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-3/metadata.csv
-Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-3.zip
-Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-3.csv
+Modified,2018-08-10T22:40:38
+Issued,2018-08-10T22:40:32
+Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-4/metadata.csv
+Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-4.zip
+Distribution,http://library.metatab.org/sandiegodata.org-beachwatch-4.csv
 Ckanid,083b5c5a-d869-4562-a643-a00ee42462a2
 Giturl,https://github.com/san-diego-water-quality/water-datasets.git
 ""
