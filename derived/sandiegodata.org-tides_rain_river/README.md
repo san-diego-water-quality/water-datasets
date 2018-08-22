@@ -12,10 +12,7 @@ Diego river, and the max and min tide level at La Jolla.
 
 
 See the [EDA
-Notebook](https://github.com/san-diego-water-quality/water-datasets/blob/master/
-sandiegodata.org-water_quality/notebooks/eda-tides_river_rain.ipynb) for
-details of the structure of the data, in particular, the time coverage in the
-Nulls section.
+Notebook](https://github.com/san-diego-water-quality/water-datasets/blob/master/derived/sandiegodata.org-tides_rain_river/notebooks/eda-tides_river_rain.ipynb) for details of the structure of the data, in particular, the time coverage in the Nulls section.
 
 
 # Versions
