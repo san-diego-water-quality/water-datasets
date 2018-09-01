@@ -1,30 +1,38 @@
-Declare,metatab-latest,,,
-Title,San Diego Coastkeeper Water Monitoring. ,,,
-Description,"Monitoring measurements for San Diego creeks. Temperature, pH, conductivity,",,,
-Description,"bacteria, turbidity and nutrients. ",,,
-Identifier,d10aa73c-6e91-4830-8c29-6af93195c0a3,,,
-Name,ceden.waterboards.ca.gov-sdck_monitoring-1,,,
-Dataset,sdck_monitoring,,,
-Origin,ceden.waterboards.ca.gov,,,
-Time,,,,
-Space,,,,
-Grain,,,,
-Variant,,,,
-Version,1,,,
-Created,2018-08-21T18:18:18,,,
-Modified,2018-08-21T18:23:43,,,
-Giturl,https://github.com/san-diego-water-quality/water-datasets.git,,,
-,,,,
+Declare,metatab-latest
+Title,San Diego Coastkeeper Water Monitoring
+Description,"Monitoring measurements for San Diego creeks. Temperature, pH, conductivity,"
+Description,"bacteria, turbidity and nutrients."
+Identifier,d10aa73c-6e91-4830-8c29-6af93195c0a3
+Name,ceden.waterboards.ca.gov-sdck_monitoring-2
+Dataset,sdck_monitoring
+Origin,ceden.waterboards.ca.gov
+Time,
+Space,
+Grain,
+Variant,
+Version,2
+Group,natural-environment
+Tag,water-project
+Created,2018-08-21T18:18:18
+Modified,2018-08-22T20:15:05
+Issued,2018-08-22T20:15:00
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-sdck_monitoring-2/metadata.csv
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-sdck_monitoring-2.zip
+Distribution,http://library.metatab.org/ceden.waterboards.ca.gov-sdck_monitoring-2.csv
+Ckanid,ccba660f-15eb-4820-bc88-586c9359da88
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git
+""
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-,,,,
+""
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
-Documentation,http://www.ceden.org/docs/2017_documentation/cedenfield_implan_2017_0103.pdf,Field Data Submission Guidance Document,,Guide for submitting data to CEDEN. Sort of like data documentation. 
-,,,,
+Documentation,http://www.ceden.org/docs/2017_documentation/cedenfield_implan_2017_0103.pdf,Field Data Submission Guidance Document,,
+Documentation.2,Guide for submitting data to CEDEN. Sort of like data documentation.
+""
 Section,Resources,Name,Description,
 Datafile,file:data/sdck_monitoring.csv,sdck_monitoring,,
-,,,,
+""
 Section,Schema,DataType,AltName,Description
 Table,sdck_monitoring,,,
 Table.Column,Program,string,program,

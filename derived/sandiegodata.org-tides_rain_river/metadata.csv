@@ -1,36 +1,37 @@
-Declare,metatab-latest
-Title,"San Diego Tides, Rain and River Flow"
-Description,"A combined dataset of NOAA weather reports, USGS flow rates for the Sn Diego"
-Description,River and NOAA tide levels for La Jolla.
-Identifier,c7382519-687d-4387-9548-4963c9daa502
-Name,sandiegodata.org-tides_rain_river-6
-Dataset,tides_rain_river
-Origin,sandiegodata.org
-Version,6
-Tag,water-project
-Created,2018-07-28T22:55:09
-Modified,2018-08-15T23:43:12
-Issued,2018-08-15T23:43:07
-Distribution,http://library.metatab.org/sandiegodata.org-tides_rain_river-6/metadata.csv
-Distribution,http://library.metatab.org/sandiegodata.org-tides_rain_river-6.zip
-Distribution,http://library.metatab.org/sandiegodata.org-tides_rain_river-6.csv
-Ckanid,c3631441-e271-4bed-aa2a-7f7f79906b98
-Giturl,https://github.com/san-diego-water-quality/water-datasets.git
-""
+Declare,metatab-latest,,,
+Title,"San Diego Tides, Rain and River Flow",,,
+Description,"A combined dataset of NOAA weather reports, USGS flow rates for the Sn Diego",,,
+Description,River and NOAA tide levels for La Jolla.,,,
+Identifier,c7382519-687d-4387-9548-4963c9daa502,,,
+Name,sandiegodata.org-tides_rain_river-6,,,
+Dataset,tides_rain_river,,,
+Origin,sandiegodata.org,,,
+Version,7,,,
+Tag,water-project,,,
+Created,2018-07-28T22:55:09,,,
+Modified,2018-08-15T23:43:12,,,
+Issued,2018-08-15T23:43:07,,,
+Distribution,http://library.metatab.org/sandiegodata.org-tides_rain_river-6/metadata.csv,,,
+Distribution,http://library.metatab.org/sandiegodata.org-tides_rain_river-6.zip,,,
+Distribution,http://library.metatab.org/sandiegodata.org-tides_rain_river-6.csv,,,
+Ckanid,c3631441-e271-4bed-aa2a-7f7f79906b98,,,
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git,,,
+,,,,
 Section,Contacts,Email,Organization,Url
 Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
-""
+,,,,
 Section,Documentation,Title,Description,
 Documentation,file:README.md,README,,
-""
+,,,,
 Section,References,Name,Description,
 Reference,index:waterservices.usgs.gov-stream_discharge-fashion_valley_sd#fashion_valley,sd_river_discharge,"Stream discharge rates for the San Diego River, Fashion Valley Station.",
 Reference,index:tidesandcurrents.noaa.gov-water_levels-la_jolla#water_levels,la_jolla_tide,High and Low Ocean water levels for the La Jolla station.,
 Reference,index:noaa.gov-localclimate-200808_201807-san#lcd-san,local_climate,Local climate data for San Diego,
-""
+Reference,index:noaa.gov-daily_summary-1998e-san#daily_summary,daily_summary,Daily weather summary,
+,,,,
 Section,Resources,Name,Description,
 Datafile,notebooks/Combine.ipynb#comb,tides_river_rain,"Combined max, min tides, San Diego river flow and daily precipitation",
-""
+,,,,
 Section,Schema,DataType,Description,
 Table,tides_river_rain,,,
 Table.Column,date,date,date,

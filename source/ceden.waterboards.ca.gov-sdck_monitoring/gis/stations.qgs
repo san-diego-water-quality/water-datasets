@@ -16,10 +16,10 @@
   <mapcanvas>
     <units>degrees</units>
     <extent>
-      <xmin>-117.61504707336412423</xmin>
-      <ymin>32.51311097500000358</ymin>
-      <xmax>-116.77312126159687011</xmax>
-      <ymax>33.40729202500000383</ymax>
+      <xmin>-117.26568111826014729</xmin>
+      <ymin>32.95549721711238078</ymin>
+      <xmax>-117.25252602745109698</xmax>
+      <ymax>32.96946879601880198</ymax>
     </extent>
     <rotation>0</rotation>
     <projections>1</projections>
@@ -925,6 +925,15 @@
         <property key="labeling/xOffset" value="0"/>
         <property key="labeling/yOffset" value="0"/>
         <property key="labeling/zIndex" value="0"/>
+        <property key="qgis2web/Visible" value="true"/>
+        <property key="qgis2web/popup/parentproject" value="inline label"/>
+        <property key="qgis2web/popup/program" value="inline label"/>
+        <property key="qgis2web/popup/project" value="inline label"/>
+        <property key="qgis2web/popup/stationcode" value="header label"/>
+        <property key="qgis2web/popup/stationgroup" value="inline label"/>
+        <property key="qgis2web/popup/stationname" value="inline label"/>
+        <property key="qgis2web/popup/targetlatitude" value="no label"/>
+        <property key="qgis2web/popup/targetlongitude" value="no label"/>
         <property key="variableNames"/>
         <property key="variableValues"/>
       </customproperties>
@@ -1050,10 +1059,6 @@ def my_form_open(dialog, layer, feature):
     <Paths>
       <Absolute type="bool">false</Absolute>
     </Paths>
-    <qgis2web>
-      <Min type="QString">9223-37-20</Min>
-      <Max type="QString">0--</Max>
-    </qgis2web>
     <Digitizing>
       <DefaultSnapToleranceUnit type="int">2</DefaultSnapToleranceUnit>
       <LayerSnappingList type="QStringList"/>
@@ -1066,6 +1071,33 @@ def my_form_open(dialog, layer, feature):
       <DefaultSnapTolerance type="double">0</DefaultSnapTolerance>
       <LayerSnappingToleranceList type="QStringList"/>
     </Digitizing>
+    <qgis2web>
+      <Maxzoomlevel type="QString">28</Maxzoomlevel>
+      <Showpopupsonhover type="bool">false</Showpopupsonhover>
+      <Basemaps type="QString">OSM</Basemaps>
+      <Exportfolder type="QString">/Users/eric/proj/virt-proj/water/water-datasets/derived/sandiegodata.org-station_maps/web</Exportfolder>
+      <mapFormat type="QString">leaflet</mapFormat>
+      <Precision type="QString">maintain</Precision>
+      <Measuretool type="QString">None</Measuretool>
+      <Usedebuglibraries type="bool">false</Usedebuglibraries>
+      <Baselayer type="QStringList">
+        <value>OSM</value>
+      </Baselayer>
+      <Addlayerslist type="QString">None</Addlayerslist>
+      <MatchprojectCRS type="bool">false</MatchprojectCRS>
+      <Highlightonhover type="bool">false</Highlightonhover>
+      <Addaddresssearch type="bool">false</Addaddresssearch>
+      <Minzoomlevel type="QString">1</Minzoomlevel>
+      <Geolocateuser type="bool">false</Geolocateuser>
+      <Exporter type="QString">folder</Exporter>
+      <MinifyGeoJSONfiles type="bool">false</MinifyGeoJSONfiles>
+      <Extent type="QString">Canvas extent</Extent>
+      <Restricttoextent type="bool">false</Restricttoextent>
+      <Template type="QString">full-screen</Template>
+      <Mappinglibrarylocation type="QString">CDN</Mappinglibrarylocation>
+      <Searchlayer type="QString">stations_0</Searchlayer>
+      <Layersearch type="QString">stations: stationcode</Layersearch>
+    </qgis2web>
     <PositionPrecision>
       <DecimalPlaces type="int">2</DecimalPlaces>
       <Automatic type="bool">true</Automatic>
