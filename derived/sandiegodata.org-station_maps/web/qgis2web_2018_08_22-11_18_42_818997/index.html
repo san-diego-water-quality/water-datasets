@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="http://unpkg.com/leaflet@1.0.3/dist/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css">
+        <link rel="stylesheet" href="css/leaflet-search.css">
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="http://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-search.js"></script>
+        <script src="data/stations_0.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:28, minZoom:1
+        }).fitBounds([[32.513110975,-117.788547302],[33.407292025,-116.599621033]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+        var bounds_group = new L.featureGroup([]);
+        var basemap0 = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 28
+        });
+        basemap0.addTo(map);
+        function setBounds() {
+        }
+        function pop_stations_0(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">stationgroup</th>\
+                        <td>' + (feature.properties['stationgroup'] !== null ? Autolinker.link(String(feature.properties['stationgroup'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>stationcode</strong><br />' + (feature.properties['stationcode'] !== null ? Autolinker.link(String(feature.properties['stationcode'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">stationname</th>\
+                        <td>' + (feature.properties['stationname'] !== null ? Autolinker.link(String(feature.properties['stationname'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">program</th>\
+                        <td>' + (feature.properties['program'] !== null ? Autolinker.link(String(feature.properties['program'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">parentproject</th>\
+                        <td>' + (feature.properties['parentproject'] !== null ? Autolinker.link(String(feature.properties['parentproject'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">project</th>\
+                        <td>' + (feature.properties['project'] !== null ? Autolinker.link(String(feature.properties['project'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['targetlatitude'] !== null ? Autolinker.link(String(feature.properties['targetlatitude'])) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['targetlongitude'] !== null ? Autolinker.link(String(feature.properties['targetlongitude'])) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_stations_0_0(feature) {
+            switch(String(feature.properties['stationgroup'])) {
+                default:
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(209,222,121,1.0)',
+            }
+                    break;
+                case 'BTQ':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(224,108,170,1.0)',
+            }
+                    break;
+                case 'BVC':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(85,212,97,1.0)',
+            }
+                    break;
+                case 'EDC':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(23,219,137,1.0)',
+            }
+                    break;
+                case 'EH':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(211,160,58,1.0)',
+            }
+                    break;
+                case 'EN':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(64,62,225,1.0)',
+            }
+                    break;
+                case 'FM':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(82,232,132,1.0)',
+            }
+                    break;
+                case 'IB':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(120,203,67,1.0)',
+            }
+                    break;
+                case 'LPQ':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(78,239,210,1.0)',
+            }
+                    break;
+                case 'MB':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(121,203,207,1.0)',
+            }
+                    break;
+                case 'OC':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(116,26,205,1.0)',
+            }
+                    break;
+                case 'OTY':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(95,208,77,1.0)',
+            }
+                    break;
+                case 'PBL':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103,130,216,1.0)',
+            }
+                    break;
+                case 'PL':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(64,180,229,1.0)',
+            }
+                    break;
+                case 'RSC':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(123,96,203,1.0)',
+            }
+                    break;
+                case 'SC':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(231,136,209,1.0)',
+            }
+                    break;
+                case 'SCC':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(230,43,99,1.0)',
+            }
+                    break;
+                case 'SDG':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(207,71,209,1.0)',
+            }
+                    break;
+                case 'SE':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(74,133,201,1.0)',
+            }
+                    break;
+                case 'SEL':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(200,124,69,1.0)',
+            }
+                    break;
+                case 'SGT':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(240,132,107,1.0)',
+            }
+                    break;
+                case 'SLR':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(204,196,123,1.0)',
+            }
+                    break;
+                case 'SWT':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(170,16,225,1.0)',
+            }
+                    break;
+                case 'TJ':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(164,233,52,1.0)',
+            }
+                    break;
+                case 'TJN':
+                    return {
+                pane: 'pane_stations_0',
+                radius: 8.0,
+                opacity: 1,
+                color: 'rgba(0,0,0,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1,
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(237,97,104,1.0)',
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_stations_0');
+        map.getPane('pane_stations_0').style.zIndex = 400;
+        map.getPane('pane_stations_0').style['mix-blend-mode'] = 'normal';
+        var layer_stations_0 = new L.geoJson(json_stations_0, {
+            attribution: '<a href=""></a>',
+            pane: 'pane_stations_0',
+            onEachFeature: pop_stations_0,
+            pointToLayer: function (feature, latlng) {
+                var context = {
+                    feature: feature,
+                    variables: {}
+                };
+                return L.circleMarker(latlng, style_stations_0_0(feature));
+            },
+        });
+        bounds_group.addLayer(layer_stations_0);
+        map.addLayer(layer_stations_0);
+        setBounds();
+        var i = 0;
+        layer_stations_0.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['stationcode'] !== null?String('<div style="color: #000000; font-size: 8pt; font-family: \'.SF NS Text\', sans-serif;">' + layer.feature.properties['stationcode']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_stations_0'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        map.addControl(new L.Control.Search({
+            layer: layer_stations_0,
+            initial: false,
+            hideMarkerOnCollapse: true,
+            propertyName: 'stationcode'}));
+        resetLabels([layer_stations_0]);
+        map.on("zoomend", function(){
+            resetLabels([layer_stations_0]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_stations_0]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_stations_0]);
+        });
+        </script>
+    </body>
+</html>

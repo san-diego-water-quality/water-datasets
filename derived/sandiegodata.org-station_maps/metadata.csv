@@ -1,0 +1,40 @@
+Declare,metatab-latest
+Title,Water Quality Monitoring Stations
+Description,Geographic positions for Beachwatch and San Diego Coastkeeper monitoring
+Description,stations
+Identifier,ea152aa2-6f53-4807-b038-b75648f285d9
+Name,sandiegodata.org-station_maps-1
+Dataset,station_maps
+Origin,sandiegodata.org
+Time,
+Space,
+Grain,
+Variant,
+Version,1
+Created,2018-08-22T15:09:13
+Modified,2018-08-22T15:31:22
+Giturl,https://github.com/san-diego-water-quality/water-datasets.git
+""
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+""
+Section,Documentation,Title,Description,
+Documentation,file:README.md,README,,
+""
+Section,References,Name,Descriptions,
+Reference,index:ceden.waterboards.ca.gov-beachwatch-sandiego#beachwatch-sd,beachwatch,,
+Reference,index:ceden.waterboards.ca.gov-sdck_monitoring#sdck_monitoring,sdck,San Diego Coastkeeper monitoring data,
+""
+Section,Resources,Name,Description,
+Datafile,file:notebooks/Stations.ipynb#df,stations,Combined list of Beachwatch and San Diego Coastkeeper stations,
+""
+Section,Schema,DataType,AltName,Description
+Table,stations,,,
+Table.Column,stationgroup,string,,
+Table.Column,stationcode,string,,
+Table.Column,stationname,string,,
+Table.Column,program,string,,
+Table.Column,parentproject,string,,
+Table.Column,project,string,,
+Table.Column,targetlatitude,number,,
+Table.Column,targetlongitude,number,,
